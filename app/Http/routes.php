@@ -14,3 +14,24 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('prueba', function() {
+    $form = "<form action='prueba' method='post'>".
+        "<input type='hidden' name='_token' value='".csrf_token()."'/>".
+        "<input type='hidden' name='_method' value='delete'/>".
+        "<input type='submit'/>".
+        "</form>";
+    return $form;
+});
+
+Route::post('prueba', function() {
+    return "POST!!!";
+});
+
+Route::put('prueba', function (){
+    return "PUT!!!";
+});
+
+Route::delete('prueba', function() {
+    return "DELETE!!!";
+});
