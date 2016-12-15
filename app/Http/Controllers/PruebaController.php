@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Blog\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
+use Blog\Http\Requests;
 
 class PruebaController extends Controller
 {
