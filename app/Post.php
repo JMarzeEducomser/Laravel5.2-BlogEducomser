@@ -18,4 +18,15 @@ class Post extends Model
     // Cambiamos el key
     protected $primaryKey = 'codigo';
     public $incrementing = false;
+
+    // Relationships
+    // 1->N (1)
+    public function categoria(){
+        return $this->belongsTo('Blog\Categoria');
+    }
+
+    // N->N
+    public function tags(){
+        return $this->belongsToMany('Blog\Tag', 'post_tag', 'post_codigo', 'tag_id');
+    }
 }

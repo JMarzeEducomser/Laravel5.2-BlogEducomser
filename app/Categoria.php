@@ -14,4 +14,10 @@ class Categoria extends Model
 
     // No timestamps
     public $timestamps = false;
+
+    // Relationships
+    // 1->N (N)
+    public function posts(){
+        return $this->hasMany('Blog\Post');
+    }
 }
