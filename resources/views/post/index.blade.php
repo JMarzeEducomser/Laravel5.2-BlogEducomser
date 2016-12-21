@@ -27,10 +27,16 @@
                         <tr class="table-body">
                             <td>{{ $post->codigo }}</td>
                             <td>{{ $post->titulo }}</td>
-                            <td>{{ $post->publicado }}</td>
+                            <td>
+                                @if($post->publicado)
+                                Si
+                                @else
+                                No
+                                @endif
+                            </td>
                             <td>{{ $post->categoria->nombre }}</td>
-                            <td>{{ $post->created_at }}</td>
-                            <td>{{ $post->updated_at }}</td>
+                            <td>{{ $post->created_at->diffForHumans() }}</td>
+                            <td>{{ $post->updated_at->diffForHumans() }}</td>
                         </tr>
                         @endforeach
 
