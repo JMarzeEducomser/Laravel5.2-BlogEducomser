@@ -18,8 +18,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::get(); // Select * from posts
-        //dd($posts);
+        $posts = Post::orderBy('created_at', 'DESC')->paginate(5);
+        // SELECT * FROM posts ORDER BY 'created_at' LIMIT ...
         return view('post.index')->with('posts', $posts);
     }
 

@@ -36,6 +36,10 @@
 
                     </table>
                 </div>
+
+                <div class="panel-footer text-center">
+                    {{ $posts->render() }}
+                </div>
             </div>
 
         </div>
