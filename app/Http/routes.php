@@ -43,5 +43,11 @@ Route::auth();
 
 Route::get('/home', 'HomeController@index');
 
-// Rutas para Post
-Route::resource('post', 'PostController');
+// Grupo de Rutas
+Route::group(['prefix' => 'admin'], function() {
+    // Rutas para Post
+    Route::resource('post', 'PostController');
+    //Route::resource('categoria', 'CategoriaController');
+    //Route::resource('tag', 'TagController');
+});
+
