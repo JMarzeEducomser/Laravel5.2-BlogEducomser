@@ -10,6 +10,12 @@ Recuerda revisar la documentación para reforzar los conocimientos impartidos [L
 
 Todos los trabajos deben ser enviados por correo electrónico en formato texto.
 
+1. Realizar ejemplos puntuales (¿para que sirve cada uno?) sobre los métodos permitidos en las rutas (patch y options). Se requieren los archivos: routes.php. [Routing](https://laravel.com/docs/5.2/routing)
+2. ¿Qué es homestead y valet para Laravel?
+3. Investigue sobre la encriptación en Laravel
+4. Implemente migraciones y modelos para los siguientes requerimientos: Los usuarios del sistema pueden comentar sobre los posts publicados, Los usuarios del sistema puden calificar los posts de 0 a 5 estrellas, Los usuarios del sistema pueden responder a los comentarios de otros usuarios. Se requiere los archivos: Migraciones y Modelos. [Migrations](https://laravel.com/docs/5.2/migrations), [Eloquent ORM](https://laravel.com/docs/5.2/eloquent), [Relationships](https://laravel.com/docs/5.2/eloquent-relationships)
+5. Implemente controlador, vista y rutas para las entidades: Categoría y Tag. Se requiere los archivos: Controlador, Vistas y routes.php.
+
 ## Notas Parciales
 
 Código de Alumno | Asistencia (25) | Examen Final (40) | Extras | Nota Final (100)
@@ -27,6 +33,7 @@ php artisan serve
 Crear un Controlador
 ```javascript
 php artisan make:controller NombreSingularController
+php artisan make:controller NombreSingularController --resource
 ```
 Cambiar Namespace
 ```javascript
@@ -36,9 +43,31 @@ Cambiar Key
 ```javascript
 php artisan key:generate
 ```
+Crear una Migración
+```javascript
+php artisan make:migration crate_entidadPlural_table --create=entidadPlural
+```
+Ejecutar Migraciones
+```javascript
+php artisan migrate
+php artisan migrate --seed
+php artisan migrate:refresh --seed
+```
+Ejecutar un Seeder determinado
+```javascript
+php artisan db:seed --class=NombreTableSeeder
+```
+Crear un Modelo
+```javascript
+php artisan make:model EntidadSingular
+```
+Crear un Seeder
+```javascript
+php artisan make:seeder EntidadPluralTableSeeder
+```
 
 ## Facilitador
 
-J. Marcelo Arze - Desarrollador de Sistemas
+J. Marcelo Arze - Lic. en Informática
 - [marze@educomser.com](marze@educomser.com)
 - [arze.jesus@gmail.com](arze.jesus@gmail.com)
