@@ -18,7 +18,18 @@ Todos los trabajos deben ser enviados por correo electrónico en formato texto.
 
 ## Notas Parciales
 
-Código de Alumno | Asistencia (25) | Examen Final (40) | Extras | Nota Final (100)
+Código de Alumno | Email | Asistencia (25) | TI-01 | TI-02 | TI-03 | TI-04 | TI-05 | Examen Final (40) | Extras | Nota Final (100)
+--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---:
+ACE020285 |
+CLE080386 | erickcastillolaura@gmail.com
+FUD210474 | dsflores@gmail.com
+GGM230183 |
+GVJ050286 |
+LCJ040178 |
+QCR300690 | rodrigo.quiroga.challco@gmail.com
+MEG190892 | gaby.murga.space@gmail.com
+MGJ031077 |
+MVE300689 | ely22.valencia@gmail.com
 
 ## Comandos Artisan
 
