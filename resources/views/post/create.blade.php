@@ -12,16 +12,30 @@
 
                 <div class="panel-body">
 
-                    <form action="{{ route('admin.post.store') }}" method="post" class="form-horizontal">
-                        {{ csrf_field() }}
+                    {!! Form::open(['route' => 'admin.post.store', 'method' => 'POST', 'class' => 'form-horizontal']) !!}
 
                         <div class="form-group">
-                            <label for="codigo" class="col-md-4 control-label">Código</label>
+                            {!! Form::label('codigo', 'Código', ['class' => 'col-md-4 control-label']) !!}
                             <div class="col-md-6">
-                                <input type="text" name="codigo" id="codigo" class="form-control" placeholder="Ej. XXX-123456">
+                                {!! Form::text('codigo', null, ['placeholder' => 'Ej. XXX-123456', 'class' => 'form-control']) !!}
                             </div>
                         </div>
-                    </form>
+
+                        <div class="form-group">
+                            {!! Form::label('titulo', 'Título', ['class' => 'col-md-4 control-label']) !!}
+                            <div class="col-md-6">
+                                {!! Form::text('titulo', null, ['placeholder' => 'Ej. Nuevo Post', 'class' => 'form-control']) !!}
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            {!! Form::label('contenido', 'Contenido', ['class' => 'col-md-4 control-label']) !!}
+                            <div class="col-md-6">
+                                {!! Form::textarea('contenido', null, ['placeholder' => 'Ej. Contenido del Post', 'class' => 'form-control']) !!}
+                            </div>
+                        </div>
+
+                    {!! Form::close() !!}
 
                 </div>
 
