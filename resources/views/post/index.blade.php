@@ -13,6 +13,11 @@
                 </div>
 
                 <div class="panel-body">
+                    <a href="{{ route('admin.post.create') }}" class="btn btn-success">
+                        <i class="fa fa-btn fa-plus"></i>Nuevo
+                    </a>
+                    <hr/>
+
                     <table class="table table-hover">
                         <tr class="table-header">
                             <th>Código</th>
