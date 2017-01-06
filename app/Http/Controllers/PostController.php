@@ -52,6 +52,11 @@ class PostController extends Controller
     public function store(Request $request)
     {
         //dd($request->all());
+        $post = new Post($request->all());
+        //$post->codigo = $request['codigo'];
+        $post->save();
+
+        return redirect()->route('admin.post.index');
     }
 
     /**
