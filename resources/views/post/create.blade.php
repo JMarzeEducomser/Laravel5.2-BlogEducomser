@@ -12,6 +12,16 @@
 
                 <div class="panel-body">
 
+                    @if(count($errors) > 0)
+                    <div class="validation-messages">
+                        <ul>
+                            @foreach($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                    @endif
+
                     {!! Form::open(['route' => 'admin.post.store', 'method' => 'POST', 'class' => 'form-horizontal']) !!}
 
                         <div class="form-group">

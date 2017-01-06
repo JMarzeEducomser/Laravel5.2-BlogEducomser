@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 
 use Blog\Http\Requests;
 
+// PostRequest
+use Blog\Http\Requests\PostRequest;
+
 // Modelos a utilizar
 use Blog\Post;
 use Blog\Categoria;
@@ -49,7 +52,7 @@ class PostController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PostRequest $request)
     {
         //dd($request->all());
         $post = new Post($request->all());
