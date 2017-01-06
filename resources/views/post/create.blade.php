@@ -35,6 +35,26 @@
                             </div>
                         </div>
 
+                        <div class="form-group">
+                            {!! Form::label('publicado', '¿Publicado?', ['class' => 'col-md-4 control-label']) !!}
+                            <div class="col-md-6">
+                                {!! Form::select('publicado', [true => 'Si', false => 'No'], true, ['class' => 'form-control']) !!}
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            {!! Form::label('categoria_id', 'Categoría', ['class' => 'col-md-4 control-label']) !!}
+                            <div class="col-md-6">
+                                {!! Form::select('categoria_id', $categorias, null, ['class' => 'form-control', 'placeholder' => 'Seleccione una categoría']) !!}
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-6 col-md-offset-4">
+                                <input type="submit" value="Guardar" class="btn btn-success"/>
+                            </div>
+                        </div>
+
                     {!! Form::close() !!}
 
                 </div>
