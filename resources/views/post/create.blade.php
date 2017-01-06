@@ -24,10 +24,15 @@
 
                     {!! Form::open(['route' => 'admin.post.store', 'method' => 'POST', 'class' => 'form-horizontal']) !!}
 
-                        <div class="form-group">
+                        <div class="form-group{{ $errors->has('codigo')?' has-error':'' }}">
                             {!! Form::label('codigo', 'Código', ['class' => 'col-md-4 control-label']) !!}
                             <div class="col-md-6">
                                 {!! Form::text('codigo', null, ['placeholder' => 'Ej. XXX-123456', 'class' => 'form-control']) !!}
+                                @if($errors->has('codigo'))
+                                <span class="help-block">
+                                    <strong>{{ $errors->first('codigo') }}</strong>
+                                </span>
+                                @endif
                             </div>
                         </div>
 
