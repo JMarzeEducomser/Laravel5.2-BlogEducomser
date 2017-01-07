@@ -81,7 +81,13 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        //
+        $post = Post::find($id);
+        //dd($post);
+        $categorias = Categoria::orderBy('nombre', 'ASC')->lists('nombre', 'id');
+
+        return view('post.edit')
+            ->with('post', $post)
+            ->with('categorias', $categorias);
     }
 
     /**
