@@ -37,9 +37,3 @@
         {!! Form::select('categoria_id', $categorias, null, ['class' => 'form-control', 'placeholder' => 'Seleccione una categoría']) !!}
     </div>
 </div>
-
-<div class="form-group">
-    <div class="col-md-6 col-md-offset-4">
-        <input type="submit" value="Guardar" class="btn btn-success"/>
-    </div>
-</div>

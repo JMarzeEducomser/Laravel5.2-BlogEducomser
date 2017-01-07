@@ -18,6 +18,12 @@
 
                         @include('post.partial.form')
 
+                        <div class="form-group">
+                            <div class="col-md-6 col-md-offset-4">
+                                <input type="submit" value="Guardar" class="btn btn-success"/>
+                            </div>
+                        </div>
+
                     {!! Form::close() !!}
 
                 </div>
