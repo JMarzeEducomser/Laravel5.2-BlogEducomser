@@ -11,6 +11,13 @@
                 </div>
 
                 <div class="panel-body">
+                    @include('post.partial.validation')
+
+                    {!! Form::open(['route' => 'admin.post.store', 'method' => 'POST', 'class' => 'form-horizontal']) !!}
+
+                        @include('post.partial.form')
+
+                    {!! Form::close() !!}
                 </div>
 
             </div>
