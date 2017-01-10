@@ -54,10 +54,14 @@ class PostController extends Controller
      */
     public function store(PostRequest $request)
     {
-        //dd($request->all());
-        $post = new Post($request->all());
-        //$post->codigo = $request['codigo'];
-        $post->save();
+        try{
+            $post = new Post($request->all());
+            $post->save();
+
+            flash('Se agregó un nuevo post titulado: ' . $post->titulo, 'success');
+        }catch(\Exception $ex){
+            flash('Ocurrió un problema al intentar agregar el post' . $ex->getMessage(), 'danger');
+        }
 
         return redirect()->route('admin.post.index');
     }
