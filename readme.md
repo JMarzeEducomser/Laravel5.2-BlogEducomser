@@ -15,6 +15,8 @@ Todos los trabajos deben ser enviados por correo electrónico en formato texto.
 3. Investigue sobre la encriptación en Laravel
 4. Implemente migraciones y modelos para los siguientes requerimientos: Los usuarios del sistema pueden comentar sobre los posts publicados, Los usuarios del sistema puden calificar los posts de 0 a 5 estrellas, Los usuarios del sistema pueden responder a los comentarios de otros usuarios. Se requiere los archivos: Migraciones y Modelos. [Migrations](https://laravel.com/docs/5.2/migrations), [Eloquent ORM](https://laravel.com/docs/5.2/eloquent), [Relationships](https://laravel.com/docs/5.2/eloquent-relationships)
 5. Implemente controlador, vista y rutas para las entidades: Categoría y Tag. Se requiere los archivos: Controlador, Vistas y routes.php.
+6. Implementar CRUD en las entidades Categoría y Tag. Se requiere los archivos: CategoriaController y TagController.
+7. Implementar la recuperación de Posts eliminados. Se requiere el controlador.
 
 ## Notas Parciales
 
