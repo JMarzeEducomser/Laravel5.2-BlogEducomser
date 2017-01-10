@@ -58,7 +58,7 @@ class PostController extends Controller
             $post = new Post($request->all());
             $post->save();
 
-            flash('Se agregó un nuevo post titulado: ' . $post->titulo, 'success');
+            flash('Se agregó un nuevo post titulado: ' . $post->titulo, 'success')->important();
         }catch(\Exception $ex){
             flash('Ocurrió un problema al intentar agregar el post' . $ex->getMessage(), 'danger');
         }
