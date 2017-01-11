@@ -19,6 +19,14 @@ class Post extends Model
     protected $primaryKey = 'codigo';
     public $incrementing = false;
 
+    // Scope
+    // public function scopeNombre(){}
+    public function scopeLikePost($query, $criterio){
+        return $query
+            ->where('codigo', 'LIKE', "%$criterio%")
+            ->orWhere('titulo', 'LIKE', "%$criterio%");
+    }
+
     // Relationships
     // 1->N (1)
     public function categoria(){
