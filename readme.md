@@ -17,6 +17,7 @@ Todos los trabajos deben ser enviados por correo electrónico en formato texto.
 5. Implemente controlador, vista y rutas para las entidades: Categoría y Tag. Se requiere los archivos: Controlador, Vistas y routes.php.
 6. Implementar CRUD en las entidades Categoría y Tag. Se requiere los archivos: CategoriaController y TagController.
 7. Implementar la recuperación de Posts eliminados. Se requiere el controlador.
+8. Validar la subida de archivos, solo para imágenes (.jpg, .jpeg y .png) no mayores a 100 K.
 
 ## Notas Parciales
 
