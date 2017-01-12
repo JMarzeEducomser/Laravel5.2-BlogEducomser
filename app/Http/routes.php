@@ -51,3 +51,7 @@ Route::group(['prefix' => 'admin'], function() {
     //Route::resource('tag', 'TagController');
 });
 
+// Ruta para acceder a los archivos de imagen (Storage)
+Route::get('post\{nombreImagen}', 'PostController@getImagen')
+    ->name('post.imagen');
+

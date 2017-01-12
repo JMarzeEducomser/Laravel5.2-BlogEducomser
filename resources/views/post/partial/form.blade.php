@@ -37,3 +37,10 @@
         {!! Form::select('categoria_id', $categorias, null, ['class' => 'form-control', 'placeholder' => 'Seleccione una categoría']) !!}
     </div>
 </div>
+
+<div class="form-group">
+    {!! Form::label('imagen', 'Subir imagen', ['class' => 'col-md-4 control-label']) !!}
+    <div class="col-md-6">
+        {!! Form::file('imagen', null, ['class' => 'form-control']) !!}
+    </div>
+</div>

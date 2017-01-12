@@ -33,6 +33,7 @@
                             <th>Título</th>
                             <th>¿Publicado?</th>
                             <th>Categoría</th>
+                            <th>Imagen</th>
                             <th>Creación</th>
                             <th>Última modificación</th>
                             <th></th>
@@ -50,6 +51,13 @@
                                 @endif
                             </td>
                             <td>{{ $post->categoria->nombre }}</td>
+                            <td>
+                                @if($post->imagen != null && $post->imagen != '')
+                                <img src="{{ route('post.imagen', ['nombreImagen' => $post->imagen]) }}" alt="" width="100"/>
+                                @else
+                                Sin imagen
+                                @endif
+                            </td>
                             <td>{{ $post->created_at->diffForHumans() }}</td>
                             <td>{{ $post->updated_at->diffForHumans() }}</td>
                             <td>

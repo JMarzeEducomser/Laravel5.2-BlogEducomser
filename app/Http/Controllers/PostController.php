@@ -134,4 +134,14 @@ class PostController extends Controller
 
         return redirect()->route('admin.post.index');
     }
+
+    /**
+     *
+     *
+     */
+    public function getImagen($nombreImagen){
+        $imagen = \Storage::disk('local')->get($nombreImagen);
+
+        return response($imagen, 200);
+    }
 }

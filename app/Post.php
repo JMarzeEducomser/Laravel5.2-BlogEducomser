@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 // Eliminación lógica (1)
 use Illuminate\Database\Eloquent\SoftDeletes;
 
+// Carbon
+use Carbon\Carbon;
+
 class Post extends Model
 {
     // Eliminación lógica (2)
@@ -13,7 +16,7 @@ class Post extends Model
 
     protected $table = 'posts';
 
-    protected $fillable = ['codigo', 'titulo', 'contenido', 'publicado', 'categoria_id'];
+    protected $fillable = ['codigo', 'titulo', 'contenido', 'publicado', 'categoria_id', 'imagen'];
 
     // Cambiamos el key
     protected $primaryKey = 'codigo';
@@ -25,6 +28,20 @@ class Post extends Model
         return $query
             ->where('codigo', 'LIKE', "%$criterio%")
             ->orWhere('titulo', 'LIKE', "%$criterio%");
+    }
+
+    // Mutators
+    //public function getAttribute(){}
+    public function setImagenAttribute($imagen){
+        $nuevoNombre =
+            Carbon::now()->year . Carbon::now()->month . Carbon::now()->day
+            . "-" .
+            Carbon::now()->hour . Carbon::now()->minute . Carbon::now()->second . "." .
+            $imagen->getClientOriginalExtension();
+
+        $this->attributes['imagen'] = $nuevoNombre;
+
+        \Storage::disk('local')->put($nuevoNombre, \File::get($imagen));
     }
 
     // Relationships
