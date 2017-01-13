@@ -55,3 +55,9 @@ Route::group(['prefix' => 'admin'], function() {
 Route::get('post\{nombreImagen}', 'PostController@getImagen')
     ->name('post.imagen');
 
+// Ruta para Reporte PDF
+Route::get('post/{post}/reporte', 'PdfController@reporte')
+    ->name('post.reporte');
+
+
+

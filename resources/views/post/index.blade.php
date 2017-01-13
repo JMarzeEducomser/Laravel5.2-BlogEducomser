@@ -68,6 +68,9 @@
                                     <a href="{{ route('admin.post.show', $post->codigo) }}" class="btn btn-danger">
                                         <i class="fa fa-trash"></i>
                                     </a>
+                                    <a href="{{ route('post.reporte', $post->codigo) }}" class="btn btn-info">
+                                        <i class="fa fa-download"></i>
+                                    </a>
                                 </div>
                             </td>
                         </tr>
