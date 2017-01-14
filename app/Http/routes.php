@@ -44,7 +44,7 @@ Route::auth();
 Route::get('/home', 'HomeController@index');
 
 // Grupo de Rutas
-Route::group(['prefix' => 'admin'], function() {
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     // Rutas para Post
     Route::resource('post', 'PostController');
     //Route::resource('categoria', 'CategoriaController');
@@ -57,7 +57,8 @@ Route::get('post\{nombreImagen}', 'PostController@getImagen')
 
 // Ruta para Reporte PDF
 Route::get('post/{post}/reporte', 'PdfController@reporte')
-    ->name('post.reporte');
+    ->name('post.reporte')
+    ->middleware('admin');
 
 
 
