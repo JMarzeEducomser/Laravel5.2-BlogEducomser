@@ -48,7 +48,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     // Rutas para Post
     Route::resource('post', 'PostController');
     //Route::resource('categoria', 'CategoriaController');
-    //Route::resource('tag', 'TagController');
+    Route::resource('tag', 'TagController');
 });
 
 // Ruta para acceder a los archivos de imagen (Storage)
